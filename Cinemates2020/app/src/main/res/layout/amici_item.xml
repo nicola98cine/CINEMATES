@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:elevation="8dp"
+    app:cardCornerRadius="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--text view for our course name-->
+
+        <!--text view for our course description-->
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:src="@drawable/avatar00"
+            android:visibility="visible"/>
+
+        <TextView
+            android:id="@+id/Nickname"
+            android:layout_width="191dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/imageView"
+            android:padding="8dp"
+            android:text="Nickname"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/idPerson"
+            android:layout_width="191dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Nickname"
+            android:layout_toRightOf="@id/imageView"
+            android:padding="5dp"
+            android:text="Name Surname"
+            android:textSize="18sp" />
+        android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/idDate"
+            android:layout_width="228dp"
+            android:layout_height="44dp"
+            android:layout_below="@id/idPerson"
+            android:layout_toRightOf="@id/imageView"
+            android:padding="5dp"
+            android:text="Name Surname"
+            android:textSize="18sp" />
+        android:textColor="@color/black" />
+
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

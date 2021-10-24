@@ -1,0 +1,62 @@
+<resources>
+    <string name="app_name">CINEMATES2020</string>
+    <string name="database">AWS</string>
+    <string name="facebook_app_id">201884531942181</string>
+    <string name="fb_login_protocol_scheme">fb201884531942181</string>
+    <string name="cinemates">CINEMATES</string>
+    <string name="emailaddress">emailaddr</string>
+    <string name="password">password</string>
+    <string name="firstname">firstnam</string>
+    <string name="lastname">lastname</string>
+    <string name="nickname">nickname</string>
+    <string name="birthdate">birthdate</string>
+    <string name="signup">signup</string>
+    <string name="back">back</string>
+    <string name="RegistrazioneOK">Registrazione OK</string>
+    <string name="loading">loading</string>
+    <string name="action_search">searchfilm</string>
+    <string name="search_hint">srchint</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Preferiti</string>
+    <string name="menu_slideshow">Davedere</string>
+    <string name="menu_preferiti">Preferiti</string>
+    <string name="menu_davedere">Davedere</string>
+    <string name="menu_amici">Richieste</string>
+    <string name="menu_feed">Feed</string>
+    <string name="menu_friends">Friends</string>
+
+    <string name="search">search</string>
+    <string name="todo">TODO</string>
+    <string name="titolo">titolo</string>
+    <string name="genere">genere</string>
+    <string name="trama">trama</string>
+    <string name="preferiti">+ LISTA PREFERITI</string>
+    <string name="da_vedere">+ LISTA DA VEDERE</string>
+    <string name="titolofilm">Titolo Film</string>
+    <string name="genereFilm">Genere</string>
+    <string name="da_vedere_rem">- DAVEDERE</string>
+    <string name="preferiti_rem">- PREFERITI</string>
+    <string name="title_activity_friends_feed">FriendsFeed</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="title_activity_friend_feed">FriendFeed</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_friendsfeed2">friendsfeed2</string>
+    <string name="title_activity_newfriendsfeed">newfriendsfeed</string>
+    <string name="texton"><![CDATA[Ricezione Richieste -> Invio]]></string>
+    <string name="textoff"><![CDATA[Invio Richieste -> Ricezione]]></string>
+    <string name="personal">+ LISTA PERSONALE</string>
+    <string name="ListaPersonale">Personale</string>
+    <string name="menu_personal">ListaPersonale</string>
+    <string name="logout">LOGOUT</string>
+
+
+</resources>

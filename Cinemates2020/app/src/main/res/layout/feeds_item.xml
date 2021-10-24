@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="1dp"
+    android:elevation="8dp"
+    app:cardCornerRadius="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+
+
+        <TextView
+            android:id="@+id/Nickname"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:padding="2dp"
+            android:text="Nickname"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/Datatime"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="9dp"
+            android:layout_toRightOf="@id/Nickname"
+            android:textSize="18sp"
+            android:text="Datatime" />
+
+        <TextView
+            android:id="@+id/Description"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/Nickname"
+            android:textSize="16dp"
+            android:text="TextView" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

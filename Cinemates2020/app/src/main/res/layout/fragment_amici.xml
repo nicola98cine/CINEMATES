@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".HomeActivity">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content">
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp"
+            android:text="AMICI " />
+
+        <Button
+            android:id="@+id/Button"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:text="RICEZIONE " />
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:text="INVIO" />
+    </LinearLayout>
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        app:iconifiedByDefault="false"
+        app:showAsAction="always"
+        app:queryHint="digita qui utenti da cercare"
+        app:actionViewClass="androidx.appcompat.widget.SearchView">
+        <requestFocus />
+    </androidx.appcompat.widget.SearchView>
+    <!--recycler view to display our data-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/idRVFriend"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>
