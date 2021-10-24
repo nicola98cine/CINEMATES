@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "308680386961",
+    "project_id": "cinemates2020-17a13",
+    "storage_bucket": "cinemates2020-17a13.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:308680386961:android:a5198889a3a4d7f1cd9230",
+        "android_client_info": {
+          "package_name": "com.example.myapplicationcinemates1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "308680386961-mcbdniu4m8rmlcepj0pg4ts3hi0p8pad.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.myapplicationcinemates1",
+            "certificate_hash": "48d4ac547873140fe360d23330a3f70702d72190"
+          }
+        },
+        {
+          "client_id": "308680386961-l5clu1971b26ukvikmbe0as24upp0rni.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXp9fW2UYDZc3oZ-IFQFHGb6AMmRoVKas"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "308680386961-l5clu1971b26ukvikmbe0as24upp0rni.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
