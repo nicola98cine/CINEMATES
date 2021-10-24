@@ -1,0 +1,148 @@
+console.log('Loading function');
+
+var AWS = require('aws-sdk');
+var dynamo = new AWS.DynamoDB.DocumentClient();
+
+/**
+ * Provide an event that contains the following keys:
+ *
+ *   - operation: one of the operations in the switch statement below
+ *   - tableName: required for operations that interact with DynamoDB
+ *   - payload: a parameter to pass to the operation being performed
+ */
+exports.handler = function(event, context, callback) {
+    console.log('Received event:', JSON.stringify(event, null, 2));
+
+    var operation = event.operation;
+
+    if (event.TableName) {
+        event.payload.TableName = event.TableName;
+    }
+
+    switch (operation) {
+        case 'create':
+            dynamo.put(event.payload, callback);
+            break;
+        case 'read':
+            dynamo.get(event.payload, callback);
+            break;
+        case 'update':
+            dynamo.update(event.payload, callback);
+            break;
+        case 'delete':
+            dynamo.delete(event.payload, callback);
+            break;
+        case 'list':
+            dynamo.scan(event.payload, callback);
+            break;
+        case 'echo':
+            callback(null, "Success");
+            break;
+        case 'ping':
+            callback(null, "pong");
+            break;
+        case 'nextpreferiti':
+            var params = {
+                ProjectionExpression: 'ID',
+                TableName: 'LISTAPREFERITI'
+            };
+            dynamo.scan (params,callback);
+            break;
+        case 'myupdate_saved':
+            var params = {
+    	    TableName: "UTENTI",
+            Key: {            
+		        "USERID": "roberto.verde@libero.it"
+	        },
+    	    UpdateExpression: "set LISTAPERS =:val",
+    	    ExpressionAttributeValues: {
+                ":val": "LISTA_DI_ROBERTO"
+	        }
+        }
+        dynamo.update(params,callback);
+            break;
+        case 'myupdate':
+            var params = {
+    	    TableName: event.TableName,
+            Key: {            
+		        "USERID": event.payload.var
+	        },
+    	    UpdateExpression: event.payload.UpdateExpression,
+    	    ExpressionAttributeValues: {
+                ":val": event.payload.parameter
+	        }
+        }
+        dynamo.update(params,callback);
+            break;
+            
+            case 'myupdate2':
+            var params = {
+    	    TableName: event.TableName,
+            Key: {            
+		        "USERID": event.payload.var,
+		        "DATATIME":event.payload.parameter
+	        },
+    	    UpdateExpression: "SET STATO = :topic",
+    	    ExpressionAttributeValues: {
+                ":topic": "1"
+	        }
+        }
+        dynamo.update(params,callback);
+            break;
+        
+        case 'myquery':
+            var params = {
+                FilterExpression: event.payload.FilterExpression,
+                ExpressionAttributeValues: {
+                    ":topic": event.payload.parameter
+                },
+                TableName: event.TableName
+            };
+            dynamo.scan(params,callback);
+            break;
+        case 'queryCount':
+            var params = {
+                FilterExpression: event.payload.FilterExpression,
+                ExpressionAttributeValues: {
+                    ":topic": event.payload.parameter
+                },
+                Select:'COUNT',
+                TableName: event.TableName
+            };
+            dynamo.scan(params,callback);
+            break;
+            
+            
+        case 'queryCountDate':
+            var params = {
+                FilterExpression: event.payload.FilterExpression,
+                ExpressionAttributeValues: {
+                    ":par1": event.payload.parameter1,
+                    ":par2": event.payload.parameter2,
+                    ":par3": event.payload.parameter3
+                },
+                Select:'COUNT',
+                TableName: event.payload.TableName
+            };
+            dynamo.scan(params,callback);
+            break;
+            
+        case 'queryMaxDate':
+            var params = {
+                FilterExpression : "USERID = :userid",
+                ExpressionAttributeValues : {
+                ":userid" : "pincopallo@alice.it"        
+                },
+                ScanIndexForward: false,
+                TableName: "ACCESSI"
+            };
+            dynamo.scan(params,callback);
+            break;
+            
+            
+            
+            
+        default:
+            callback(`Unknown operation: ${operation}`);
+    }
+};

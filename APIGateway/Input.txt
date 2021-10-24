@@ -1,0 +1,36 @@
+{
+    "type":"object",
+    "properties":{
+        "operation":{"type":"string"},
+        "TableName":{"type":"string"},
+        "payload":{"type":"object",
+    		"properties":{
+    		    "Item":{"type":"object",
+    			        "properties":{
+    			                    "USERID": {"type":"string"},
+    			                    "IDFILM":{"type":"string"},				                    
+					                "DATATIME":{"type":"string"},
+					                "NICKNAME": {"type":"string"},
+			                        "NOME" : {"type":"string"},
+			                        "COGNOME" : {"type":"string"},
+			                        "NOMEFILM": {"type":"string"},
+			                        "TRAMA": {"type":"string"},
+			                        "GENERE": {"type":"string"},
+			                        "IMMAGINE": {"type":"string"},
+			                        "TITOLO": {"type":"string"},
+			                        "DATANASCITA": {"type":"string"},
+			                        "ID":{"type":"string"}
+        		        }
+    		    },
+    		    "Key":{"type":"object",
+    			        "properties":{
+    			                    "USERID": {"type":"string"},
+    			                    "IDFILM":{"type":"string"}				                    
+        		        }
+    		    },
+    		    "FilterExpression":{"type":"string"},
+			    "parameter":{"type":"string"}
+    		}
+        }
+    },
+    "title":"Input"
