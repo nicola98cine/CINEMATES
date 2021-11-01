@@ -41,21 +41,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="388dp"
-        android:layout_height="211dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginTop="400dp"
-        android:layout_marginBottom="130dp"
-        android:text="@string/trama"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
 
     <ImageView
         android:id="@+id/imageView2"
@@ -114,13 +99,13 @@
         android:id="@+id/tosee"
         android:layout_width="115dp"
         android:layout_height="60dp"
-        android:layout_marginTop="606dp"
-        android:layout_marginBottom="65dp"
-
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
+
+        android:layout_marginTop="606dp"
         android:layout_marginEnd="270dp"
         android:layout_marginRight="270dp"
+        android:layout_marginBottom="65dp"
         android:text="@string/da_vedere"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -130,14 +115,14 @@
     <Button
         android:id="@+id/prefer"
         android:layout_width="115dp"
-        android:layout_marginTop="606dp"
-        android:layout_marginBottom="65dp"
-
         android:layout_height="60dp"
         android:layout_marginStart="145dp"
+
         android:layout_marginLeft="145dp"
+        android:layout_marginTop="606dp"
         android:layout_marginEnd="145dp"
         android:layout_marginRight="145dp"
+        android:layout_marginBottom="65dp"
         android:text="@string/preferiti"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -147,19 +132,46 @@
     <Button
         android:id="@+id/personal"
         android:layout_width="125dp"
-        android:layout_marginTop="606dp"
-        android:layout_marginBottom="65dp"
-
         android:layout_height="60dp"
         android:layout_marginStart="270dp"
+
         android:layout_marginLeft="270dp"
+        android:layout_marginTop="606dp"
         android:layout_marginEnd="15dp"
         android:layout_marginRight="15dp"
+        android:layout_marginBottom="65dp"
         android:text="@string/personal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="409dp"
+        android:layout_height="204dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="401dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="126dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+        </LinearLayout>
+    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
