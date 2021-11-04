@@ -20,7 +20,6 @@ android {
         multiDexEnabled true
         resValue "string", "default_account_iccid", properties.getProperty("default.account.iccid", "")
 
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -63,7 +62,7 @@ dependencies {
     implementation 'com.facebook.android:facebook-login:4.42.0'
     implementation 'com.google.android.material:material:1.4.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
-    implementation files('libs\\gson-2.2.4.jar')
+    //implementation files('libs\\gson-2.2.4.jar')
     implementation files('libs\\aws-android-sdk-core-2.16.13.jar')
     implementation files('libs\\aws-android-sdk-apigateway-core-2.16.13.jar')
 
